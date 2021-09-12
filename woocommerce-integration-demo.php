@@ -1,12 +1,9 @@
 <?php
 /**
- * Plugin Name: WooCommerce Integration  Demo
- * Plugin URI: https://github.com/BFTrick/woocommerce-integration-demo
+ * Plugin Name: WooCommerce Integration SHARK SMS 
  * Description: A plugin demonstrating how to add a new WooCommerce integration.
- * Author: Patrick Rauland
- * Author URI: http://speakinginbytes.com/
+ * Author: AYOUB AROUCHI
  * Version: 1.0
- *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -41,12 +38,13 @@ class WC_Integration_Demo {
 		// Checks if WooCommerce is installed.
 		if ( class_exists( 'WC_Integration' ) ) {
 			// Include our integration class.
-			include_once 'includes/class-wc-integration-demo-integration.php';
+			include_once 'includes/class-wc-integration-sharksms-integration.php';
 
 			// Register the integration.
 			add_filter( 'woocommerce_integrations', array( $this, 'add_integration' ) );
 		} else {
 			// throw an admin error if you like
+			 echo 'WooCommerce is not installed';
 		}
 	}
 
